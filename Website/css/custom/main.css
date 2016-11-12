@@ -1,3 +1,225 @@
-* {
+/* Debug classes */
+
+.red{
     border: 1px solid red;
+}
+
+/* Page structure */
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+html{
+    background: url(/vspace/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background: transparent;
+}
+
+.container-main{
+    margin-top: 50px;
+}
+
+.page-content{
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    float: left;
+    display: inline-block;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    min-height: 500px;
+    margin: 50px auto;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+}
+
+/* Header */
+
+.page-header{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    font-size: 12px;
+    color: black;
+    border-bottom: 2px solid #45c6a8;
+    position: fixed;
+    z-index: 1000;
+}
+
+.page-header a{
+    display: inline-block;
+    float: left;
+}
+
+.page-header #left{
+    float: left;
+    display: inline-block;
+}
+
+.page-header #right{
+    float: right;
+    display: inline-block;
+}
+
+#logo-box img {
+    vertical-align: middle;
+    height: 37px;
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-right: -13px;
+}
+
+#logo-box img:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.home-block {
+    background-color: white;
+    padding: 20px;
+    min-width: calc(100% - 60px);
+    min-height: calc(100% - 60px);
+}
+
+.email {
+    margin-top: 14px;
+    margin-right: 13px;
+    color: #007ba4;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.product {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 19px;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: #007ba4;
+    display: inline-block;
+    margin-top: 11px;
+    margin-left: 15px;
+    float: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sub-logo {
+    display: inline-block;
+    float: left;
+    margin-top: 17px;
+    margin-left: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* GUI ELEMENTS */
+
+.gui-section-header{
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gui-column {
+    min-height: 500px;
+}
+
+#floor_input{
+    border-top: 6px solid #00cacd;
+    border-bottom: 3px solid #00cacd;
+}
+
+#floor_input p{
+    color: #00cacd;
+}
+
+#floor_visualiser{
+    border-top: 6px solid #00de7d;
+    border-bottom: 3px solid #00de7d;
+}
+
+#floor_visualiser p{
+    color: #00de7d;
+}
+
+.button-row {
+    margin-top: 10px;
+}
+
+.button-row button{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-action{
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+/* Info Columns */
+.info-column{
+    min-height: 400px;
+}
+
+#usage-column{
+    border-top: 3px solid #00de7d;
+    border-bottom: 3px solid #00de7d;
+}
+
+#install-column{
+    border-top: 3px solid #00cacd;
+    border-bottom: 3px solid #00cacd;
+}
+
+#team-column{
+    border-top: 3px solid #008cde;
+    border-bottom: 3px solid #008cde;
+}
+
+#info-row{
+    margin-top: 11px;
+}
+
+.info-column-header{
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+#download-img{
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -22px;
+    display: inherit;
+}
+
+#download-img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Miscellaneous */
+.copy {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    margin-top: -51px;
+    font-size: 13px;
 }
