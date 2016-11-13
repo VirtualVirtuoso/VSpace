@@ -236,16 +236,15 @@ body {
     width: 66%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -22px;
+    margin-top: -8px;
     display: inherit;
+    opacity: 0.6;
 }
 
 #download-img:hover{
-    opacity: 0.8;
+    opacity: 0.4;
     cursor: pointer;
 }
-
-
 
 /* Miscellaneous */
 .copy {

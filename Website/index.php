@@ -16,7 +16,7 @@
         <div class="page-header">
             <a href="/">
                 <div id="logo-box">
-                    <img src="/vspace/img/logo.jpg">
+                    <img src="/vspace/img/logo.png">
                 </div>
             </a>
             <div id="left">
@@ -50,11 +50,12 @@
                         <button class="btn btn-info btn-action" onclick="visualise()">Visualise</button>
                     </div>
                     <div class="col-sm-3 col-xs-6 text-xs-center">
-                        <button class="btn btn-info btn-action">Send to App</button>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 text-xs-center">
                         <button class="btn btn-info btn-action" onclick="resetGrid()">Reset</button>
                     </div>
+                    <div class="col-sm-3 col-xs-6 text-xs-center">
+                        <button class="btn btn-info btn-action" onclick="saveJSON()">Send to App</button>
+                    </div>
+
 <!--                    <div class="col-sm-3 col-xs-6 text-xs-center">-->
 <!--                        <button class="btn btn-info btn-action">Button 4</button>-->
 <!--                    </div>-->
@@ -111,6 +112,7 @@
         <script src="/vspace/js/bootstrap.min.js"></script>
         <script src="/vspace/js/three/build/three.min.js"></script>
         <script src="/vspace/js/three/examples/js/controls/DragControls.js"></script>
+        <script src="/vspace/js/json2.js"></script>
         <script src="/vspace/js/custom/data.js"></script>
     </body>
 </html>

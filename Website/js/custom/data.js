@@ -11,8 +11,8 @@ var SCENE_HEIGHT = 20;
 
 function initCamera(){
     camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 1, 150);
-    camera.position.set(14, 8, 19);
-    camera.lookAt(new THREE.Vector3(10, 1, 10));
+    camera.position.set(15.6, 8, 17.6);
+    camera.lookAt(new THREE.Vector3(9.2, 3, 10));
 }
 
 function initRenderer(){
@@ -25,8 +25,8 @@ function renderScene(sceneMatrix){
     var sceneHeight = sceneMatrix.length;
     var matrixEmpty = true;
 
-    for(var i = 1; i < sceneWidth; i++) {
-        for (var j = 1; j < sceneHeight; j++) {
+    for(var i = 0; i < sceneWidth; i++) {
+        for (var j = 0; j < sceneHeight; j++) {
             if(sceneMatrix[i][j] === 1) {
                 matrixEmpty = false;
                 var plate = new THREE.Mesh(new THREE.BoxGeometry(2,0.1,2), new THREE.MeshNormalMaterial());
@@ -62,9 +62,32 @@ function gridHandler() {
     }
 }
 
+function saveJSON(){
+    console.log("Saving JSON...");
+
+    var file = {
+        "structure" : {
+            "floor-plan" : cells
+        },
+        "data" : {}
+    };
+
+    var output = JSON.stringify(file);
+
+    $.ajax({
+        type : "POST",
+        url : "/vspace/json.php",
+        dataType : 'json',
+        data : {
+            json : output
+        }
+    });
+
+}
+
 function visualise(){
     var elements = getElementsStartsWithId("input");
-    for(var i = 1; i < elements.length; i++) {
+    for(var i = 0; i < elements.length; i++) {
         if(elements[i].className.includes('gridActive')) {
             var numbers = extractXY(elements[i]);
             var x = numbers[0];
@@ -87,8 +110,8 @@ function resetGrid() {
         elements[i].className = "input_button";
     }
 
-    for(var x = 1; x < cells[1].length; x++) {
-        for(var y = 1; y < cells[1].length; y++) {
+    for(var x = 0; x < cells[0].length; x++) {
+        for(var y = 0; y < cells[0].length; y++) {
             cells[x][y] = 0;
         }
     }
@@ -113,9 +136,9 @@ function rotateScene(){
 function generateInputs(){
     var appendPoint = document.getElementById("input-container");
 
-    for(var i = 1; i <= 10; i++) {
+    for(var i = 0; i < 10; i++) {
         cells[i] = new Array(10);
-        for(var j = 1; j <= 10; j++) {
+        for(var j = 0; j < 10; j++) {
             cells[i][j] = 0;
             var input = document.createElement("div");
             input.setAttribute("id", "input" + i + "+" + j);
