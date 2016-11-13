@@ -35,24 +35,25 @@
                     <div class="col-sm-5 col-xs-12">
                         <div class="gui-column" id="floor_input">
                             <p class="gui-section-header">Input Floor-plan</p>
-
+                            <div id="input-container"></div>
                         </div>
                     </div>
                     <div class="col-sm-7 col-xs-12">
                         <div class="gui-column" id="floor_visualiser">
                             <p class="gui-section-header">Preview</p>
+                            <div id="three-container"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row button-row">
                     <div class="col-sm-3 col-xs-6 text-xs-center">
-                        <button class="btn btn-info btn-action">Visualise</button>
+                        <button class="btn btn-info btn-action" onclick="visualise()">Visualise</button>
                     </div>
                     <div class="col-sm-3 col-xs-6 text-xs-center">
                         <button class="btn btn-info btn-action">Send to App</button>
                     </div>
                     <div class="col-sm-3 col-xs-6 text-xs-center">
-                        <button class="btn btn-info btn-action">Reset</button>
+                        <button class="btn btn-info btn-action" onclick="resetGrid()">Reset</button>
                     </div>
 <!--                    <div class="col-sm-3 col-xs-6 text-xs-center">-->
 <!--                        <button class="btn btn-info btn-action">Button 4</button>-->
@@ -106,8 +107,10 @@
             <p class="copy"> Copyright VSpaces :: 2016</p>
         </div>
 
-
+        <script src="/vspace/js/jquery-3.1.1.min.js"></script>
+        <script src="/vspace/js/bootstrap.min.js"></script>
+        <script src="/vspace/js/three/build/three.min.js"></script>
+        <script src="/vspace/js/three/examples/js/controls/DragControls.js"></script>
+        <script src="/vspace/js/custom/data.js"></script>
     </body>
-
-    <script src="js/bootstrap.min.js"></script>
 </html>

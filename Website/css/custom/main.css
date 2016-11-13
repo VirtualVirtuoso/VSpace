@@ -19,6 +19,10 @@ html{
     background-size: cover;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background: transparent;
 }
@@ -137,8 +141,27 @@ body {
     font-weight: bold;
 }
 
+.gridActive{
+    background-color: #80edc1 !important;
+}
+
+.input_button {
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    margin-top: -7px;
+    background-color: transparent;
+    border: 1px solid #b1b1b1;
+    display: inline-block;
+}
+
+.input_button:hover{
+    cursor: pointer;
+    background-color: #fff500;
+}
+
 .gui-column {
-    min-height: 500px;
+    min-height: 535px;
 }
 
 #floor_input{
@@ -172,6 +195,12 @@ body {
     width: 100%;
     font-family: "Raleway", sans-serif;
     font-weight: bold;
+}
+
+#three-container {
+    border: 1px solid #b1b1b1;
+    height: 400px;
+    margin-top: -6px;
 }
 
 /* Info Columns */
@@ -215,6 +244,8 @@ body {
     opacity: 0.8;
     cursor: pointer;
 }
+
+
 
 /* Miscellaneous */
 .copy {
