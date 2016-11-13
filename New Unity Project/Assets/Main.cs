@@ -8,14 +8,14 @@ public class Main : MonoBehaviour {
 	void Start() {
 		matrix = new int[,] {	
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-			{ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
-			{ 0, 0, 1, 1, 1, 1, 0, 0, 0, 0 },
-			{ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 },
-			{ 0, 1, 1, 1, 1, 1, 1, 1, 0, 0 },
-			{ 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 },
-			{ 0, 0, 0, 0, 1, 1, 0, 1, 0, 0 },
-			{ 0, 0, 0, 0, 1, 1, 0, 1, 0, 0 },
-			{ 0, 0, 0, 0, 0, 1, 1, 1, 0, 0 },
+			{ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+			{ 0, 1, 0, 1, 1, 1, 1, 0, 1, 0 },
+			{ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+			{ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+			{ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+			{ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
+			{ 0, 1, 0, 1, 1, 1, 1, 0, 1, 0 },
+			{ 0, 1, 1, 1, 1, 1, 1, 1, 1, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 		};
 
@@ -28,7 +28,7 @@ public class Main : MonoBehaviour {
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++) {
 				if (matrix [i, j] == 1) {
-					GameObject test = Instantiate (Resources.Load ("Foo") as GameObject, new Vector3 (i * 5.4f, 2, j * 5.4f), Quaternion.identity) as GameObject;
+					GameObject test = Instantiate (Resources.Load ("Box") as GameObject, new Vector3 (i * 5.4f, 2, j * 5.4f), Quaternion.identity) as GameObject;
 					if((i != 0 & i != 9) & (j != 0 & j != 9)){
 						foreach(Transform child in test.transform) {
 							if (child.name == "North") {
